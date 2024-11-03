@@ -467,6 +467,24 @@
   
     <article id="comments" lazyload>
       
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.7.2/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"Ov23lixkRfOI43RnCYtJ","clientSecret":"e5e2ff04b76e43af1fb9d9d31babac612ae826de","repo":"blog_comments","owner":"longls777","admin":["longls777"],"language":"en","labels":["Gitalk"],"perPage":15,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"","enable":true,"autoExpand":true,"id":"uid","recentComment":true},
+          {
+            id: '19824cb7503ef48b621a17ad70c66d96'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
